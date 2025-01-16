@@ -17,7 +17,7 @@ def main():
             # Añadir una clave única a cada número de entrada utilizando el índice y el nombre del producto
             unique_key = f"quantity_{index}_{row['PRODUCTO']}_{CONTEO}"
             CONTEO += 1
-            new_quantity = st.number_input(f"{row['PRODUCTO']}", min_value=0, value=cantidad_actual, key=unique_key)
+            new_quantity = st.number_input(f"{row['TIPO']} - {row['PRODUCTO']}", min_value=0, value=cantidad_actual, key=unique_key)
             df.at[index, 'CANTIDAD'] = new_quantity
 
         st.write("Datos actualizados:")
