@@ -20,9 +20,10 @@ def main():
             new_quantity = st.number_input(f"{row['TIPO']} - {row['PRODUCTO']}", min_value=0, value=cantidad_actual, key=unique_key)
             df.at[index, 'CANTIDAD'] = new_quantity
 
-        st.write("Datos actualizados:")
-        st.dataframe(df)
-
+        #st.write("Datos actualizados:")
+        #st.dataframe(df)
+        st.divider()
+        st.subheader("Enviar Requerimientos por WhatsApp")
         # Número de teléfono y mensaje
         fecha = st.date_input("Selecciones la  fecha si es diferente de hoy", "today")
         phone_number = st.text_input("Escribe el número de teléfono")
