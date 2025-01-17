@@ -38,7 +38,7 @@ def main():
             message = f"Los requerimientos para {fecha}:\n" + "\n".join(message_lines)
             encoded_message = quote(message)
             if st.button("Generar enlace para WhatsApp Web"):
-                whatsapp_url = f"https://api.whatsapp.com/send?phone=00{phone_number}&text={encoded_message}"
+                whatsapp_url = f"https://api.whatsapp.com/send?phone=+58{phone_number}&text={encoded_message}"
                 st.markdown(f"[Enviar mensaje por WhatsApp]({whatsapp_url})")
     else:
         st.error("El archivo Excel no tiene una columna 'CANTIDAD'.")
